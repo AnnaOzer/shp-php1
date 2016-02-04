@@ -1,4 +1,4 @@
 <h1>Hello, world!</h1>
 <?php
-    echo 'Good news!';
+    echo '<strong>TEST</strong>';
 ?>
