@@ -25,6 +25,8 @@ echo volume(5, 3, 2.5); // 37,5
 
 // определение функции (один раз), функция должна быть объявлена до её первого вызова
 function volumeHeight($x, $y, $z = 2.4) {
+    // оператор assert который проверит на истинность, если ложь - fatal error; применяется для отладки
+    assert( $x == 5 ); // assertion OK
     $v = $x * $y * $z;
     return $v;
 }
@@ -34,4 +36,5 @@ echo volumeHeight(5, 3); // 36
 ?><br><?php
 echo volumeHeight(5, 3, 4); // 60
 ?><br><?php
+//assert( $x == 5 ); // assertion FAILED
 //
