@@ -37,4 +37,15 @@ echo volumeHeight(5, 3); // 36
 echo volumeHeight(5, 3, 4); // 60
 ?><br><?php
 //assert( $x == 5 ); // assertion FAILED
+
+// внуренняя переменная функции $v не видна снаружи
+var_dump($v); // null
+?><br><?php
+// вызов функции может происходить много раз
+$v = volume(5, 3, 3);
+var_dump($v); // int 45
+?><br><?php
+$v = volume(5, 5, 3.5);
+var_dump($v); // float(87.5)
+
 //
