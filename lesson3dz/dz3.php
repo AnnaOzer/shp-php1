@@ -61,6 +61,13 @@ for ($i = 0; 10 > $i; print $i++) {
 
 ?><br><br><?php
 
+/* как вариант - инкремент во второй части */
+for ($i = -1; 9 > $i++; print $i) {
+
+}
+
+?><br><br><?php
+
 /*
  * 4. Объявите массив, где в качестве ключей будут использоваться названия областей, а
 в качестве значений – массивы с названиями городов из соответствующей области.
@@ -211,6 +218,7 @@ $arrayTranslit = [
 ];
 
 /*
+ * string strtr ( string $str , string $from , string $to )
  * string strtr ( string $str , array $replace_pairs )
  *
  * Параметр replace_pairs может быть использован вместо to и from,
@@ -342,3 +350,32 @@ function rusToLatSpaceToUnderline($str) {
 echo rusToLatSpaceToUnderline($str1);
 ?><br><?php
 echo rusToLatSpaceToUnderline($str2);
+
+/*
+ * str_split — Преобразует строку в массив
+
+array str_split ( string $string [, int $split_length = 1 ] )
+Преобразует строку в массив.
+
+Список параметров ¶
+
+string
+Входная строка.
+
+split_length
+Максимальная длина фрагмента.
+
+Возвращаемые значения ¶
+
+Если указан необязательный аргумент split_length, возвращаемый массив будет содержать части исходной
+ строки длиной split_length каждая, иначе каждый элемент будет содержать один символ.
+ * */
+
+    /*
+     * substr - байтовая функция, на Utf8 не работает;
+     *
+     * -----
+     *
+     * $simv = $string[$i]; // и-тый символ строки
+     * к строке можно обращаться как к массиву байтовых символов
+     * */
