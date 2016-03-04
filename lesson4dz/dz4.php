@@ -51,9 +51,9 @@ function calculation($a, $b, $operator) {
 if(!empty($_POST)) {
 
     // если не пусты данные об операндах и операторе
-    if (!empty($_POST['a'])
-    && !empty($_POST['b'])
-    && !empty($_POST['op'])
+    if (isset($_POST['a'])
+    && isset($_POST['b'])
+    && isset($_POST['op'])
     ){
         // если введено допустимое арифметическое действие
         if( in_array($_POST['op'], $operators) ) {
