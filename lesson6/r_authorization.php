@@ -16,7 +16,7 @@ function checkLoginPassword($login, $password) {
 
     // 3. проверка на совпадение пароля пользователя с тем, который есть у нас
 
-    if ($password != $users['login']) {
+    if ($password != $users[$login]) {
         return false;
     }
 
@@ -24,3 +24,9 @@ function checkLoginPassword($login, $password) {
 
     return true;
 }
+
+// 4. Проверки функции checkLoginPassword - протестировали функцию
+
+var_dump( checkLoginPassword('foo', '12131654') );  // неверный логин, вернет bool(false), ожидаемо
+var_dump( checkLoginPassword('Ivan', '123123485') ); // верный логин и неверный пароль, вернет bool(false), ожидаемо
+var_dump( checkLoginPassword('Ivan', '123') ); // верный логин, верный пароль, вернет bool(true), ожидаемо
