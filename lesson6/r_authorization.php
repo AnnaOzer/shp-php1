@@ -30,3 +30,16 @@ function checkLoginPassword($login, $password) {
 var_dump( checkLoginPassword('foo', '12131654') );  // неверный логин, вернет bool(false), ожидаемо
 var_dump( checkLoginPassword('Ivan', '123123485') ); // верный логин и неверный пароль, вернет bool(false), ожидаемо
 var_dump( checkLoginPassword('Ivan', '123') ); // верный логин, верный пароль, вернет bool(true), ожидаемо
+
+// 5. Функция авторизации
+
+function login($login, $password) {
+
+    $_SESSION['user'] = $login;
+
+}
+
+function logout()
+{
+    unset($_SESSION['user']);
+}
