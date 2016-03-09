@@ -36,10 +36,18 @@ var_dump( checkLoginPassword('Ivan', '123') ); // верный логин, ве�
 function login($login, $password) {
 
     $_SESSION['user'] = $login;
+    setcookie('user', $login, time() + 86400); // реализацию скрываем внутрь в функциях
 
 }
 
 function logout()
 {
     unset($_SESSION['user']);
+}
+
+// 6. Бизнес-логика
+
+// если логин и пароль прошли проверку, авторизовать этого пользователя
+if (checkLoginPassword($login, $password)) {
+    login($login, $password);
 }
