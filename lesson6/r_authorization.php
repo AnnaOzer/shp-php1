@@ -10,8 +10,17 @@ function checkLoginPassword($login, $password) {
     $users = ['Ivan'=>'123', 'Petr'=>'456', 'Vasily'=>'789',];
 
     // 2.1. Проверка на наличие $login в качестве клюся массива $users
-    if(!isset($users[$login])) {
+    if (!isset($users[$login])) {
         return false;
     }
 
+    // 3. проверка на совпадение пароля пользователя с тем, который есть у нас
+
+    if ($password != $users['login']) {
+        return false;
+    }
+
+    // после того, как все проверки прошли, возвращаем true
+
+    return true;
 }
