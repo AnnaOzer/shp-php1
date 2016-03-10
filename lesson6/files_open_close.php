@@ -4,7 +4,7 @@
 // процедура открытия файла - и есть создание ресурса
 
 // здесь укажем полный путь к файлу в своей файловой системе - работает
-//$res = fopen('c:\OpenServer\domains\shp-php1-double\lesson6\files\1.txt', 'r');
+//$res = fopen('c:\OpenServer\domains\shp-php1-double\lesson6\files\2.txt', 'r');
 
 // относительный путь к файлу - работает
 $res = fopen('files\1.txt', 'r');
