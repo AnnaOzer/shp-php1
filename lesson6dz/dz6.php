@@ -62,7 +62,7 @@ $dir_gallery = excludeDots( scandir($uploadDir) );
 <?php foreach ($dir_gallery as $image) : ?>
     <div style="display: inline-block; margin: 10px; padding: 10px; border: 1px dashed green; border-radius: 8px;">
         <div><?php echo $image; ?></div>
-        <img src="<?php echo $displayDir . $image; ?>" alt="Изображение <?php echo $image; ?>" width="300">
+        <img src="<?php echo $displayDir . urlencode($image); ?>" alt="Изображение <?php echo $image; ?>" width="300">
     </div>
 <?php endforeach; ?>
 
