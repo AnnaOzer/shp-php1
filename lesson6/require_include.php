@@ -11,7 +11,7 @@
 require 'files/functions.php';
 
 /*
- * include 'files/functions.php';
+ * include 'files/files.php';
  * не вызовет фатальной ошибки
  * программа выдаст предупреждение и продолжит работу
  * */
