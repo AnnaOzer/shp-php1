@@ -20,3 +20,21 @@ function dbInit() {
     $res = mysql_select_db($cred['dbname']);
     return $res;
 }
+
+function dbQuery($table, $sql) {
+
+    dbInit();
+    $res = mysql_query($sql);
+
+    // обработка ошибок
+    if (false === $res) {
+        return false;
+    }
+
+    // пройттись по результату
+    $ret=[];
+    while ($row = mysql_fetch_array($res)) {
+        $ret[] = $row;
+    }
+    return $res;
+}
