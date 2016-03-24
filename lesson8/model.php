@@ -13,6 +13,10 @@ function dbCred()
 function dbInit() {
 
     $cred = dbCred();
-    mysql_connect($cred['host'], $cred['user'], $cred['pass']);
-    mysql_select_db($cred['dbname']);
+    $res = mysql_connect($cred['host'], $cred['user'], $cred['pass']);
+    if (!$res) {
+        return false;
+    }
+    $res = mysql_select_db($cred['dbname']);
+    return $res;
 }
