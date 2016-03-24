@@ -21,7 +21,7 @@ function dbInit() {
     return $res;
 }
 
-function dbQuery($table, $sql) {
+function dbQuery($sql) {
 
     dbInit();
     $res = mysql_query($sql);
@@ -31,10 +31,10 @@ function dbQuery($table, $sql) {
         return false;
     }
 
-    // пройттись по результату
+    // пройтись по результату
     $ret=[];
-    while ($row = mysql_fetch_array($res)) {
+    while ($row = mysql_fetch_assoc($res)) {
         $ret[] = $row;
     }
-    return $res;
+    return $ret;
 }
