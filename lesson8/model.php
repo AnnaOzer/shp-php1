@@ -38,3 +38,16 @@ function dbQuery($sql) {
     }
     return $ret;
 }
+
+function dbExec($sql) {
+
+    dbInit();
+    $res = mysql_query($sql);
+
+    // обработка ошибок
+    if (false === $res) {
+        return false;
+    }
+
+    return true;
+}
