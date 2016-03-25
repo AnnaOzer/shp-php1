@@ -17,3 +17,5 @@ if(!empty($_FILES)) {
         }
     }
 }
+
+header('Location: /lesson8/index.php');
