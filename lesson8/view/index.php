@@ -11,5 +11,6 @@
         <li><img src="/img/<?php echo $image['file']; ?>"></li>
     <?php endforeach; ?>
 </ul>
+<?php include 'form.php'; ?>
 </body>
 </html>
