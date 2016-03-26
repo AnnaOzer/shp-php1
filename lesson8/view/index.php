@@ -8,7 +8,7 @@
 <ul>
     <?php foreach($images as $image): ?>
         <strong><?php echo $image['title']; ?></strong>
-        <li><img src="/img/<?php echo $image['file']; ?>"></li>
+        <li><img src="./img/<?php echo $image['file']; ?>"></li>
     <?php endforeach; ?>
 </ul>
 <?php include 'form.php'; ?>
